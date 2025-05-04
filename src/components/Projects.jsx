@@ -14,7 +14,7 @@ import {
   Divider,
 } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
-import Tour_Agency from "../assets/tour-agency.png";
+import Tour_Agency from "../assets/Tour-Agency.png";
 import weatherapp from "../assets/Weather-app.png";
 import filemanage from "../assets/file-manage.png";
 
