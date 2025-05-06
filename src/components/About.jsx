@@ -27,7 +27,8 @@ function About() {
             color: "#203a43", // Matching dark tone
               mb: 1,
                   }}
-                  paddingTop={5}
+          paddingTop={5}
+          textAlign={"center"}
         >
           About Me
         </Typography>
@@ -39,6 +40,7 @@ function About() {
             width: 60,
             bgcolor: "#2c5364", // Accent underline color
             borderRadius: 2,
+            mx: "auto", // Center the divider
           }}
         />
 

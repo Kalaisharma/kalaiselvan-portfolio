@@ -15,7 +15,7 @@ function Home() {
         maxWidth={false}
         disableGutters
         sx={{
-          height: "60vh",
+          height: "auto",
           width: "100%",
           background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
           display: "flex",
@@ -36,7 +36,7 @@ function Home() {
             color: "#ffffff",
             textShadow: "1px 1px 8px rgba(0, 0, 0, 0.6)",
                   }}
-                  paddingTop={5}
+                  paddingTop={10}
         >
           Hi, I'm Kalaiselvan
         </Typography>
@@ -51,6 +51,7 @@ function Home() {
             fontSize: "1.05rem",
             color: "#e0e0e0",
             textShadow: "0px 1px 3px rgba(0, 0, 0, 0.3)",
+            paddingBottom: 5,
           }}
         >
           I'm a dedicated and enthusiastic Full Stack Developer skilled in

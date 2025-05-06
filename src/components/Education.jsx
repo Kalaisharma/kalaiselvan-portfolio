@@ -38,6 +38,7 @@ function Education() {
           gutterBottom
           sx={{ fontWeight: 700, color: "#203a43", mb: 1 }}
           paddingTop={5}
+          textAlign={"center"}
         >
           Education
         </Typography>
@@ -48,6 +49,7 @@ function Education() {
             bgcolor: "#2c5364",
             borderRadius: 2,
             mb: 4,
+            mx: "auto",
           }}
         />
         <Box

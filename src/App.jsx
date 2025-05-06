@@ -9,13 +9,14 @@ import Contact from "./components/Contact";
 import Experience from "./components/Experiences";
 import Education from "./components/Education";
 
+
 function App() {
   return (
     <Box sx={{ width: "100%" }}>
       <Navbar />
       <Home />
       <About />
-      <Education />
+        <Education />
       <Skills />
       <Projects />
       <Experience />

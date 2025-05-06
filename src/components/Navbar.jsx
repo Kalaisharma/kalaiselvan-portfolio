@@ -53,7 +53,14 @@ function Navbar() {
               fontWeight: "bold",
               color: "#ffffff",
               letterSpacing: 1,
+              cursor: "pointer",
             }}
+            onClick={() =>
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              })
+            }
           >
             Kalaiselvan
           </Typography>
@@ -79,7 +86,7 @@ function Navbar() {
                   "&:hover": {
                     backgroundColor: "rgba(255,255,255,0.1)",
                     transform: "translateY(-2px)",
-                      transition: "transform 0.3s ease-in-out",
+                    transition: "transform 0.3s ease-in-out",
                     color: "#ffffff",
                   },
                   fontWeight: 500,
