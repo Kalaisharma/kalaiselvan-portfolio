@@ -9,8 +9,8 @@ function About() {
         bgcolor: "#f5f7fa", // Soft background to contrast with Home section
         py: 6,
         overflowX: "hidden",
-          }}
-          id="about"
+      }}
+      id="about"
     >
       <Container
         maxWidth="md"
@@ -25,8 +25,8 @@ function About() {
           sx={{
             fontWeight: 700,
             color: "#203a43", // Matching dark tone
-              mb: 1,
-                  }}
+            mb: 1,
+          }}
           paddingTop={5}
           textAlign={"center"}
         >
@@ -82,6 +82,7 @@ function About() {
               fontWeight: 600,
               "&:hover": {
                 backgroundColor: "#1c3a42", // Darker shade on hover
+                color: "#e8f0f2",
               },
             }}
             href="https://drive.google.com/uc?export=download&id=1kepY3y-VE3NCn16gjQIKeVE92-zDa7yb" // Update the path to your resume

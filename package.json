@@ -14,10 +14,11 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^7.0.2",
     "@mui/material": "^7.0.2",
-    "framer-motion": "^12.9.7",
+    "framer-motion": "^12.12.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
+    "react-intersection-observer": "^9.16.0",
     "simple-icons": "^14.12.3"
   },
   "devDependencies": {

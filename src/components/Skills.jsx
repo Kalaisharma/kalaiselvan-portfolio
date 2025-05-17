@@ -22,10 +22,17 @@ import {
   SiSupabase,
 } from "react-icons/si";
 import { DiGit } from "react-icons/di";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import golangLogo from "../assets/golang.svg";
 import vscodelogo from "../assets/vscode.svg";
 
 function Skills() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const skills = [
     { icon: <FaHtml5 size={30} color="#E44D26" />, label: "HTML" },
     { icon: <FaCss3Alt size={30} color="#264de4" />, label: "CSS" },
@@ -61,21 +68,21 @@ function Skills() {
 
   return (
     <Box
+      ref={ref}
       sx={{
         width: "100%",
-        bgcolor: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
         background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
         py: 6,
         color: "white",
-          }}
-          id="skills"
+      }}
+      id="skills"
     >
       <Container maxWidth="lg">
         <Typography
           variant="h4"
           gutterBottom
-                  sx={{ fontWeight: 700, color: "#ffffff", textAlign: "center" }}
-                  paddingTop={5}
+          sx={{ fontWeight: 700, color: "#ffffff", textAlign: "center" }}
+          paddingTop={5}
         >
           Skills
         </Typography>
@@ -94,25 +101,31 @@ function Skills() {
         <Grid container spacing={2}>
           {skills.map((skill, idx) => (
             <Grid item xs={6} sm={4} md={3} key={idx}>
-              <Chip
-                icon={skill.icon}
-                label={skill.label}
-                variant="filled"
-                sx={{
-                  width: "100%",
-                  justifyContent: "flex-start",
-                  fontSize: "1.1rem",
-                  color: "#ffffff",
-                  backgroundColor: "rgba(255, 255, 255, 0.08)",
-                  padding: "6px 10px",
-                  backdropFilter: "blur(3px)",
-                  transition: "transform 0.3s ease",
-                  "&:hover": {
-                    transform: "scale(1.05)",
-                    backgroundColor: "rgba(255, 255, 255, 0.15)",
-                  },
-                }}
-              />
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: idx * 0.05, duration: 0.6 }}
+              >
+                <Chip
+                  icon={skill.icon}
+                  label={skill.label}
+                  variant="filled"
+                  sx={{
+                    width: "100%",
+                    justifyContent: "flex-start",
+                    fontSize: "1.1rem",
+                    color: "#ffffff",
+                    backgroundColor: "rgba(255, 255, 255, 0.08)",
+                    padding: "20px 10px",
+                    backdropFilter: "blur(3px)",
+                    transition: "transform 0.3s ease",
+                    "&:hover": {
+                      transform: "scale(1.05)",
+                      backgroundColor: "rgba(255, 255, 255, 0.15)",
+                    },
+                  }}
+                />
+              </motion.div>
             </Grid>
           ))}
         </Grid>
