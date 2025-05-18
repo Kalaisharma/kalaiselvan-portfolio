@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 import Tour_Agency from "../assets/Tour-Agency.png";
-import weatherapp from "../assets/Weather-app.png";
+import weatherapp from "../assets/Weatherappnew.png";
 import filemanage from "../assets/file-manage.png";
 
 const projects = [
@@ -52,7 +52,7 @@ const projects = [
     fullDescription:
       "Built with ReactJS, this application uses the OpenWeather API to fetch and display weather details such as temperature, humidity, and conditions for searched cities in real time.",
     techStack: ["ReactJS", "OpenWeather API", "JavaScript", "HTML", "CSS"],
-    link: "https://6817d4333041e800086d2ed1--liveweatherapplications.netlify.app/",
+    link: "https://liveweatherapplications.netlify.app/",
   },
   {
     title: "File Management Application",
@@ -60,7 +60,15 @@ const projects = [
     shortDescription: "Upload, manage, and get notified on file actions.",
     fullDescription:
       "A backend-heavy file management application using Go (Gin), MySQL, and WebSocket. React is used for frontend. The system supports file upload, download, and real-time notifications. Supabase is optionally integrated for object storage.",
-    techStack: ["Go","Gin", "ReactJS", "Typescript", "postgreSQL", "Redis", "Supabase"],
+    techStack: [
+      "Go",
+      "Gin",
+      "ReactJS",
+      "Typescript",
+      "postgreSQL",
+      "Redis",
+      "Supabase",
+    ],
     link: "https://github.com/Kalaisharma/Kalaiselvan_Backend",
   },
 ];
