@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 import Tour_Agency from "../assets/Tour-Agency.png";
-import weatherapp from "../assets/Weatherappnew.png";
+import weatherapp from "../assets/weatherappnew.png";
 import filemanage from "../assets/file-manage.png";
 
 const projects = [
