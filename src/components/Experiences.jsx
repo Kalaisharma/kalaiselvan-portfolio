@@ -8,22 +8,9 @@ import {
   Link,
   Stack,
 } from "@mui/material";
+import ReactMarkdown from "react-markdown";
 
 const experiences = [
-  {
-    title: "Talent Acquisition Executive",
-    company: "Triad Square Infosec Pvt Ltd",
-    companyLogo:
-      "https://triadsquare.com/wp-content/uploads/2022/04/final-logo.png", // Add logo image URL here
-    website: "https://triadsquare.com/", // Add company website URL here
-    duration: "Oct 2024 - Apr 2024",
-    responsibilities: [
-      "► Responsible for sourcing and identifying top talent using platforms like Naukri and LinkedIn.",
-      "► Delivered quality profiles tailored to meet the specific requirements of clients, ensuring alignment with organizational needs.",
-      "► Built and maintained a strong pipeline of qualified candidates, fostering effective communication with clients and candidates alike.",
-      "► Contributed to the recruitment process by prioritizing client satisfaction and delivering results in a timely manner.",
-    ],
-  },
   {
     title: "Trainee Engineer",
     company: "Avasoft",
@@ -32,10 +19,11 @@ const experiences = [
     website: "https://www.avasoft.com/", // Add company website URL here
     duration: "Apr 2024 - Aug 2024",
     responsibilities: [
-      "► Acquired expertise in full-stack development technologies including HTML, CSS, JavaScript, TypeScript, ReactJS, NodeJS, ExpressJS, Golang, MSSQL, Git, and Postman.",
-      "► Completed extensive training, gaining proficiency in modern software development tools and methodologies.",
-      "► Contributed to Avamigratron, a data migration project that utilized Microsoft APIs to transfer data seamlessly between tenants, ensuring data integrity and operational efficiency.",
-      "► Collaborated with the team to troubleshoot issues, optimize processes, and enhance project outcomes.",
+      "► Acquired strong expertise in full-stack development with technologies such as **JavaScript**, **TypeScript**, **ReactJS**, **Node.js**, **Express.js**, **Golang**, and **MSSQL** for building scalable web applications.",
+      "► Developed **responsive** and **interactive UIs** using **ReactJS**, and built **robust backend services** and **RESTful APIs** with **Node.js**, **Express.js**, and **Golang**, focusing on **performance** and **maintainability**.",
+      "► Designed and managed **relational databases** using **MSSQL**, writing **complex queries** and ensuring **data consistency**, **integrity**, and **scalability** across applications.",
+      "► Contributed to **Avamigratron**, a **Microsoft 365 tenant-to-tenant data migration project**, by integrating **Microsoft Graph APIs** to securely transfer **mails**, **OneDrive files**, **calendars**, ensuring **accuracy** and handling **throttling**.",
+      "► Utilized **Git** for **version control** and **Postman** for **API testing**, supporting **smooth team collaboration** and **efficient validation** across the development lifecycle.",
     ],
   },
 ];
@@ -55,8 +43,8 @@ function Experience() {
         <Typography
           variant="h4"
           gutterBottom
-                  sx={{ fontWeight: 700, color: "#203a43", mb: 1 }}
-                  paddingTop={5}
+          sx={{ fontWeight: 700, color: "#203a43", mb: 1 }}
+          paddingTop={5}
         >
           Experience
         </Typography>
@@ -143,11 +131,10 @@ function Experience() {
                           <Typography
                             key={idx}
                             variant="body2"
-                            sx={{
-                              color: "#203a43", // Matching text color
-                            }}
+                            sx={{ color: "#203a43" }}
+                            component="div"
                           >
-                            {responsibility}
+                            <ReactMarkdown>{responsibility}</ReactMarkdown>
                           </Typography>
                         )
                       )}
