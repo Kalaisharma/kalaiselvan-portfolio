@@ -15,7 +15,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 function Contact() {
   const email = "kalaisharma05052003@gmail.com";
   const phone = "+91-9345794092";
-  const location = "Tiruvannamalai, India";
+  const location = "Chennai, India";
 
   return (
     <Box
