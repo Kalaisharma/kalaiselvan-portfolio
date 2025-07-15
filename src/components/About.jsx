@@ -85,7 +85,7 @@ function About() {
                 color: "#e8f0f2",
               },
             }}
-            href="https://drive.google.com/file/d/1bIbuT-Kwi3HqLVtbqlEwKPGGJUCjWNw1/view?usp=sharing" // Update the path to your resume
+            href="https://drive.google.com/file/d/1l3mJlv0jFqjEt7SpkwpIkGNVSLtUti0C/view?usp=drive_link" // Update the path to your resume
             download="Kalaiselvan_Resume.pdf" // Set the name of the downloaded file
           >
             Download Resume
