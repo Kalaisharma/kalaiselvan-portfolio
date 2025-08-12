@@ -17,6 +17,9 @@ import LaunchIcon from "@mui/icons-material/Launch";
 import Tour_Agency from "../assets/Tour-Agency.png";
 import weatherapp from "../assets/weatherappnew.png";
 import filemanage from "../assets/file-manage.png";
+import calendarApp from "../assets/HealthTickProject.png";
+import jobPostingsApp from "../assets/jobPostingsApp.png";
+import todoListApp from "../assets/todoApp.png";
 
 const projects = [
   {
@@ -71,6 +74,40 @@ const projects = [
     ],
     link: "https://github.com/Kalaisharma/Kalaiselvan_Backend",
   },
+  {
+    title: "Custom Calendar Booking System",
+    image: calendarApp,
+    shortDescription: "Smart scheduling for onboarding, recurring calls.",
+    fullDescription:
+      "A full-stack calendar booking system built for coaches to manage onboarding and recurring follow-up calls. Developed with React (TypeScript) and Tailwind CSS for a clean, responsive UI, Node.js for backend API, and Firebase Firestore for real-time data storage. Features include daily time-slot view, prevention of overlapping bookings, weekly recurring logic for follow-ups, and instant UI updates. Designed for both performance and user experience with a focus on modular, maintainable code.",
+    techStack: [
+      "ReactJS",
+      "TypeScript",
+      "TailwindCSS",
+      "Node.js",
+      "Firebase Firestore",
+    ],
+    link: "https://healthtick-app.netlify.app/",
+  },
+  {
+    title: "Job Postings Admin Interface",
+    image: jobPostingsApp,
+    shortDescription: "Admin panel for creating and managing job postings.",
+    fullDescription:
+      "A full-stack job management system with an admin interface for creating, editing, and tracking job postings. Built with React and Material UI for a clean, responsive UI, Node.js and Express for backend API, and MongoDB for storing job data. Features include job listing creation with form validation, status updates, search and filter capabilities, and secure role-based access control. Designed with a modular architecture for scalability, maintainability, and smooth admin workflow.",
+    techStack: ["ReactJS", "Material UI", "Node.js", "Express", "MongoDB"],
+    link: "https://job-postings-platform.netlify.app/",
+  },
+  {
+    title: "Todo List Application",
+    image: todoListApp,
+    shortDescription:
+      "Task management app with categories and progress tracking.",
+    fullDescription:
+      "A full-stack CRUD-based Todo List application where users can create tasks and categorize them as Work or Personal. Users can update a task's progress status as Pending, In Progress, or Completed, edit existing tasks, view categorized tasks, and delete tasks. Built with ReactJS for an interactive UI, Node.js and Express for the backend API, and MongoDB for persistent task storage. Designed for ease of use, efficient task management, and clean categorization.",
+    techStack: ["ReactJS", "Node.js", "Express", "MongoDB"],
+    link: "https://kalai-todolist.netlify.app/",
+  },
 ];
 
 function Projects() {
@@ -116,10 +153,11 @@ function Projects() {
 
       <Grid container spacing={3} justifyContent={"space-evenly"}>
         {projects.map((project, index) => (
-          <Grid item xs={12} sm={6} key={index} mb={3}>
+          <Grid item xs={12} sm={6} md={3} key={index} mb={3}>
             <Card
               sx={{
                 height: 300,
+                width: 300,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
@@ -139,14 +177,14 @@ function Projects() {
                 height="150"
                 image={project.image}
                 alt={project.title}
+                style={{ objectFit: "cover" }}
               />
-              <CardContent>
-                <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+              <CardContent sx={{ flexGrow: 1 }}>
+                <Typography variant="h6" sx={{ fontWeight: "bold" }} noWrap>
                   {project.title}
                 </Typography>
                 <Typography
                   variant="body2"
-                  noWrap
                   sx={{
                     color: "#e0e0e0",
                     textOverflow: "ellipsis",
@@ -175,7 +213,7 @@ function Projects() {
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              width: "auto",
+              width: "60%",
               borderRadius: 2,
               boxShadow: 24,
               p: 4,
@@ -190,7 +228,7 @@ function Projects() {
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  style={{ width: "100%", borderRadius: 8 }}
+                  style={{ width: "100%", borderRadius: 3 }}
                 />
                 <Typography variant="h5" mt={2} sx={{ fontWeight: "bold" }}>
                   {selectedProject.title}
@@ -229,8 +267,8 @@ function Projects() {
                       background: "linear-gradient(to right, #2196f3, #1e88e5)",
                       "&:hover": {
                         background:
-                              "linear-gradient(to right, #1976d2, #1565c0)",
-                          color: "white",
+                          "linear-gradient(to right, #1976d2, #1565c0)",
+                        color: "white",
                       },
                     }}
                     href={selectedProject.link}
