@@ -18,7 +18,7 @@ import Tour_Agency from "../assets/Tour-Agency.png";
 import weatherapp from "../assets/weatherappnew.png";
 import filemanage from "../assets/file-manage.png";
 import calendarApp from "../assets/HealthTickProject.png";
-import jobPostingsApp from "../assets/jobPostingsApp.png";
+import jobPostingsApp from "../assets/JobPostingsApp.png";
 import todoListApp from "../assets/todoApp.png";
 
 const projects = [
